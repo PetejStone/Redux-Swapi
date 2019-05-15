@@ -12,7 +12,7 @@ export const FETCH_START = "FETCH_START";
 
 
 export const fetch = () => dispatch => {
-    dispatch({ type: FETCH_START});
+    dispatch({ type: FETCH_START})
     axios
     .get('https://swapi.co/api/people/')
     .then(res => console.log(res))
