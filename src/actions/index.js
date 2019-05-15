@@ -10,7 +10,6 @@ export const FETCH_FAILURE = "FETCH_FAILURE"
 // the url to fetch characters from is `https://swapi.co/api/people/`
 // remember that now we have controll over our thunk-based action creator
 
-
 export const fetch = () => dispatch => {
     dispatch({ type: FETCH_START})
     axios
