@@ -21,7 +21,9 @@ class CharacterListView extends React.Component {
     }
     return (
       <div className="CharactersList_wrapper">
-        <CharacterList characters={this.props.characters} />
+      {this.props.error === '' ?
+      <CharacterList characters={this.props.characters} />
+      : <h3>{this.props.error}</h3> }
       </div>
     );
   }
