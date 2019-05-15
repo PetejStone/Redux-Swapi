@@ -1,7 +1,7 @@
 import {FETCH_START} from "../actions";
 const initialState = {
   characters: [],
-  isLoading: false,
+  fetching: true,
   error: ''
   // Array characters, Boolean fetching, null error.
 };

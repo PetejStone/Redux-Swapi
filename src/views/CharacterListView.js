@@ -11,13 +11,13 @@ class CharacterListView extends React.Component {
 
   componentDidMount(props) {
     // call our action
- 
+    this.props.fetch()
   }
 
   render() {
-    if (this.props.isLoading) {
+    if (this.props.fetching) {
       // return something here to indicate that you are fetching data
-      <h3>...Loading</h3>
+      return <h3>...Loading</h3>
     }
     return (
       <div className="CharactersList_wrapper">
@@ -31,7 +31,7 @@ class CharacterListView extends React.Component {
 // the characters and the fetching boolean
 const mapStateToProps = state => ({
   characters: state.charsReducer.characters,
-  isLoading: state.charsReducer.isLoading,
+  fetching: state.charsReducer.fetching,
   error: state.charsReducer.error
 });
 export default connect(
